@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddStockComponent } from './components/add-stock/add-stock.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
+import { ShowStockComponent } from './components/show-stock/show-stock.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     StocksComponent,
     AddStockComponent,
     HeaderComponent,
+    ShowStockComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

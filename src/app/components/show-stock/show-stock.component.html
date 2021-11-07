@@ -1,0 +1,15 @@
+<div *ngIf="stock!=undefined">Detailed information about {{stock.name}}
+  <form (ngSubmit)='submit(addForm)' #addForm='ngForm'>
+    <input type="text" name="name" ngModel required placeholder="Akcijos pavadinimas" [(ngModel)]="stock.name"><br>
+    <input type="text" name="code" ngModel required placeholder="Akcijos kodas" [(ngModel)]="stock.code"><br>
+    <input type="number" name="price" ngModel required placeholder="Akcijos kaina" [(ngModel)]="stock.price"><br>
+    <input type="number" name="previousPrice" ngModel required placeholder="Buvusi akcijos kaina" [(ngModel)]="stock.previousPrice"><br>
+    <input type="text" name="exchange" ngModel required placeholder="Birža" [(ngModel)]="stock.exchange"><br>
+    <select name="favorite" ngModel>
+      <option value="0">Ne</option>
+      <option value="1">Taip</option>
+    </select>
+    <button>Keisti</button>
+
+  </form>
+</div>

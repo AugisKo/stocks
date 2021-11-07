@@ -1,4 +1,4 @@
 <h1>Feikiniu popieriu birza</h1>
 <ul>
-  <li *ngFor='let stock of stocks'>{{stock.code}}, {{stock.name}}, {{stock.price}}, {{stock.favorite}}</li>
+  <li *ngFor='let stock of stocks'>{{stock.code}}, {{stock.name}}, {{stock.price}}, {{stock.favorite}} <a [routerLink]="['/stock', stock.code]">info</a></li>
 </ul>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Stock } from 'src/app/Models/stock';
+import { StockService } from 'src/app/services/stock.service';
 
 @Component({
   selector: 'app-add-stock',
@@ -8,7 +10,7 @@ import { Stock } from 'src/app/Models/stock';
   styleUrls: ['./add-stock.component.scss'],
 })
 export class AddStockComponent implements OnInit {
-  constructor() {}
+  constructor(private stockService: StockService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -22,5 +24,8 @@ export class AddStockComponent implements OnInit {
       form.value.exchange,
       form.value.favorite == 1
     );
+    this.stockService.addStock(stock).subscribe((response: any) => {
+      this.router.navigate(['/']);
+    });
   }
 }
