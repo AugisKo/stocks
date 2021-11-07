@@ -1,0 +1,13 @@
+<form (ngSubmit)='submit(addForm)' #addForm='ngForm'>
+  <input type="text" name="name" ngModel required placeholder="Akcijos pavadinimas"><br>
+  <input type="text" name="code" ngModel required placeholder="Akcijos kodas"><br>
+  <input type="number" name="price" ngModel required placeholder="Akcijos kaina"><br>
+  <input type="number" name="previousPrice" ngModel required placeholder="Buvusi akcijos kaina"><br>
+  <input type="text" name="exchange" ngModel required placeholder="Birža"><br>
+  <select name="favorite" ngModel>
+    <option value="0">Ne</option>
+    <option value="1">Taip</option>
+  </select>
+  <button>Pridėti</button>
+
+</form>
